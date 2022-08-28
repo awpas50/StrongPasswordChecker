@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="mainDisplay container">
+        <h2>Strong password checker</h2>
+        <div class="pw-checkbox">
+            <label class="custom-field one">
+                <input type="text" id="pwfield" required/>
+                <span class="placeholder">Your password</span>
+            </label>
+            <div class="hidepwcheckbox">
+                <input type="checkbox" id="hidepw" name="hidepw" onclick="checkBoxState()"/>
+                <label for="hidepw">Hide</label>
+            </div>
+        </div>
+        <h3>Password Strength</h3>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

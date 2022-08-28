@@ -1,0 +1,108 @@
+.container {
+    max-width: 668px;
+    background-color: var(--darkblue);
+    margin: auto;
+    padding: 8px;
+    width: 100%;
+}
+
+.mainDisplay {
+    position: relative;
+    min-height: 340px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 7rem;
+}
+
+.pw-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.hidepwcheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    transform: translateY(35%);
+}
+
+.hidepwcheckbox label {
+    transform: translateY(-5%);
+    font-size: 18px;
+}
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--darkblue);
+    padding: 12px;
+    border-radius: 3px;
+    width: 240px;
+    outline: none;
+}
+
+.custom-field .placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: var(--pink);
+    cursor: auto;
+    transition: 
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+    top: 10px;
+    font-size: 10px;
+    color: var(--brightpink);
+}
+
+/* ONE */
+.custom-field.one input {
+    background: none;
+    border: 2px solid var(--pink);
+    transition: border-color 0.3s ease;
+}
+
+.custom-field.one input:valid,
+.custom-field.one input:focus {
+    color: var(--brightpink);
+    border-color: var(--brightpink);
+    font-size: 16px;
+    font-weight: 600;
+    transition-delay: 0.1s;
+}
+
+.custom-field.one input + .placeholder {
+    padding: 0 5px;
+    left: 8px;
+}
+
+.custom-field.one input:valid + .placeholder,
+.custom-field.one input:focus + .placeholder {
+    top: 20px;
+    background: var(--darkblue);
+}
